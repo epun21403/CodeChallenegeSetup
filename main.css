@@ -2,7 +2,7 @@
   opacity: 0;
 }
 
-div img {
+#catContainer img {
   height: 200px;
   width: 200px;
   margin: 10px 10px;
