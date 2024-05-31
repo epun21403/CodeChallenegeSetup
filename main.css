@@ -1,0 +1,16 @@
+#payButton {
+  opacity: 0;
+}
+
+div img {
+  height: 200px;
+  width: 200px;
+  margin: 10px 10px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
