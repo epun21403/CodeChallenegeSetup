@@ -41,7 +41,7 @@ function calcButtonClick() {
 // 6) If the cat wax was not payable (amount was less than or equal to 0) when the button was clicked, replace the entire contents of the container with the gif found here (https://gfycat.com/snivelingbeautifuljoey-cat)
 
 async function payButton() {
-  if (currentCatTax > 0) {
+
     currentCatTax--;
     amountOwed.innerHTML = "You owe " + currentCatTax + " cat tax! Pay up!"
 
@@ -52,10 +52,14 @@ async function payButton() {
     const catImageHolder = document.createElement("img");
     catImageHolder.src = catImageUrl;
     catImgContainer.append(catImageHolder);
+
+
+  if (currentCatTax === 0) {
+    amountOwed.innerHTML = "Your debts are paid...";
+
   }
 
-  if (currentCatTax <= 0) {
-    amountOwed.innerHTML = "Your debts are paid...";
+  if (currentCatTax < 0) {
     const paidCatImage = document.createElement("img");
     paidCatImage.src = "https://gfycat.com/snivelingbeautifuljoey-cat";
     page.innerHTML = "";
